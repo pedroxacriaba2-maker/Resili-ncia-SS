@@ -1,0 +1,13 @@
+const RESILIENCIA_SS = "https://raw.githubusercontent.com/SEUUSUARIO/ResilienciaSS/main/ResilienciaSS.js"
+
+let req = new Request(RESILIENCIA_SS)
+let code = await req.loadString()
+
+if (!code || code.startsWith("404")) {
+  let a = new Alert()
+  a.title = "Erro"
+  a.message = "Não foi possível baixar o script."
+  await a.present()
+} else {
+  eval(code)
+}
