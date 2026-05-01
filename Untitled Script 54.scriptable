@@ -1,0 +1,12 @@
+{
+  "always_run_in_app" : false,
+  "icon" : {
+    "color" : "deep-purple",
+    "glyph" : "magic"
+  },
+  "name" : "Untitled Script 54",
+  "script" : "const RESILIENCIA_SS = \"https:\/\/raw.githubusercontent.com\/SEUUSUARIO\/ResilienciaSS\/main\/ResilienciaSS.js\"\n\nlet req = new Request(RESILIENCIA_SS)\nlet code = await req.loadString()\n\nif (!code || code.startsWith(\"404\")) {\n  let a = new Alert()\n  a.title = \"Erro\"\n  a.message = \"Não foi possível baixar o script.\"\n  await a.present()\n} else {\n  eval(code)\n}",
+  "share_sheet_inputs" : [
+
+  ]
+}
