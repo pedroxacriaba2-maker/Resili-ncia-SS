@@ -1,1 +1,0 @@
-# Resili-ncia-SS
